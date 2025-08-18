@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "FT\\Lib\\TestUtilities\\": "src/"
+      "SilpoTech\\Lib\\TestUtilities\\": "src/"
     }
   },
   "autoload-dev": {

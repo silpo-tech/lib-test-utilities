@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace FT\Lib\TestUtilities\TestCase\Traits;
+namespace SilpoTech\Lib\TestUtilities\TestCase\Traits;
 
 use Closure;
 use PHPUnit\Framework\Attributes\Before;

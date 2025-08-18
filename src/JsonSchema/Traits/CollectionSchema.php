@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace FT\Lib\TestUtilities\JsonSchema\Traits;
+namespace SilpoTech\Lib\TestUtilities\JsonSchema\Traits;
 
 trait CollectionSchema
 {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\TestCase\Traits;
 
-use FT\Lib\TestUtilities\TestCase\Traits\UtilityTrait;
+use SilpoTech\Lib\TestUtilities\TestCase\Traits\UtilityTrait;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Closure;

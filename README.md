@@ -9,7 +9,7 @@ Library Test Utilities contains additional test utilities
 Require package and its dependencies with composer:
 
 ```bash
-$ composer require ft/lib-test-utilities --dev
+$ composer require silpo-tech/lib-test-utilities --dev
 ```
 
 Usage for Comparator

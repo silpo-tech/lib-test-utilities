@@ -2,7 +2,7 @@
 
 namespace App\Tests\JsonSchema\Traits;
 
-use FT\Lib\TestUtilities\JsonSchema\Traits\CollectionSchema;
+use SilpoTech\Lib\TestUtilities\JsonSchema\Traits\CollectionSchema;
 use PHPUnit\Framework\TestCase;
 
 class CollectionSchemaTest extends TestCase

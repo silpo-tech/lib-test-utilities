@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace FT\Lib\TestUtilities\Comparator;
+namespace SilpoTech\Lib\TestUtilities\Comparator;
 
 use Override;
 use SebastianBergmann\Comparator\ObjectComparator;

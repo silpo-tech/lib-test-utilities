@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\Comparator;
 
-use FT\Lib\TestUtilities\Comparator\IgnoreDynamicFieldsComparator;
+use SilpoTech\Lib\TestUtilities\Comparator\IgnoreDynamicFieldsComparator;
 use PHPUnit\Framework\TestCase;
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Comparator\Factory;

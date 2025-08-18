@@ -1,8 +1,8 @@
 {
   "name": "silpo-tech/lib-test-utilities",
   "description": "Library for additional test utilities",
-  "type": "lib",
-  "license": "proprietary",
+  "type": "library",
+  "license": "MIT",
   "require": {
     "php": "^8.3",
     "ext-json": "*",

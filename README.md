@@ -1,7 +1,7 @@
 # Library Test Utilities
 
 [![CI](https://github.com/silpo-tech/lib-test-utilities/workflows/CI/badge.svg)](https://github.com/silpo-tech/lib-test-utilities/actions)
-[![codecov](https://codecov.io/gh/silpo-tech/lib-test-utilities/branch/main/graph/badge.svg)](https://codecov.io/gh/silpo-tech/lib-test-utilities)
+[![codecov](https://codecov.io/gh/silpo-tech/lib-test-utilities/branch/master/graph/badge.svg)](https://codecov.io/gh/silpo-tech/lib-test-utilities)
 [![Latest Stable Version](https://poser.pugx.org/silpo-tech/lib-test-utilities/v/stable)](https://packagist.org/packages/silpo-tech/lib-test-utilities)
 [![License](https://poser.pugx.org/silpo-tech/lib-test-utilities/license)](https://packagist.org/packages/silpo-tech/lib-test-utilities)
 

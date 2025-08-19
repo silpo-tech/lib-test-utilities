@@ -16,8 +16,14 @@ jobs:
 
     name: PHP ${{ matrix.php-version }} - ${{ matrix.dependency-version }}
 
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -28,7 +34,7 @@ jobs:
 
     - name: Cache Composer packages
       id: composer-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: vendor
         key: ${{ runner.os }}-php-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}
@@ -50,10 +56,11 @@ jobs:
       uses: codecov/codecov-action@v4
       with:
         file: ./reports/coverage/clover.xml
-        flags: php-${{ matrix.php }}
-        name: phpunit-${{ matrix.php }}
+        flags: php-${{ matrix['php-version'] }}
+        name: phpunit-${{ matrix['php-version'] }}
         fail_ci_if_error: true
         verbose: true
+        use_oidc: true
 
   static-analysis:
     runs-on: ubuntu-latest

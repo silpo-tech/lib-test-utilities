@@ -71,8 +71,11 @@ class IgnoreDynamicFieldsComparatorTest extends TestCase
         $object2->createdAt = '2024-01-01';
         $object2->updatedAt = '2024-01-02';
 
+        // This should not throw an exception since createdAt and updatedAt are ignored
         $comparator->assertEquals($object1, $object2);
-        self::assertTrue(true);
+        
+        // If we reach this point, the comparison succeeded as expected
+        $this->addToAssertionCount(1);
     }
 
     public function testCompareThrowsExceptionForDifferentValues(): void

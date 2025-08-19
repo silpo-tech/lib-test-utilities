@@ -47,11 +47,13 @@ jobs:
 
     - name: Upload coverage reports to Codecov
       if: matrix.php-version == '8.3' && matrix.dependency-version == 'prefer-stable'
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
-        file: ./coverage.xml
-        flags: unittests
-        name: codecov-umbrella
+        file: ./reports/coverage/clover.xml
+        flags: php-${{ matrix.php }}
+        name: phpunit-${{ matrix.php }}
+        fail_ci_if_error: true
+        verbose: true
 
   static-analysis:
     runs-on: ubuntu-latest

@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test:coverage": {
-      "command": "APP_ENV=test php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --coverage-text --coverage-html reports/coverage --colors=never --coverage-cobertura=./reports/coverage/cobertura.xml --coverage-clover=./reports/coverage/clover.xml --log-junit=./reports/coverage/junit.xml"
+      "command": "APP_ENV=test php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --colors=never --coverage-clover reports/coverage/clover.xml --log-junit reports/junit.xml"
     },
     "test:run": [
       "APP_ENV=test php bin/phpunit --color=always"

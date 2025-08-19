@@ -2,4 +2,5 @@
 /.gitignore export-ignore
 /phpunit.xml.dist export-ignore
 /.php-cs-fixer.php export-ignore
-/.phpstan.dist.neon export-ignore
+/phpstan.dist.neon export-ignore
+/codecov.yml export-ignore

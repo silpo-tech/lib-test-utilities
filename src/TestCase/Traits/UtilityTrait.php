@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace SilpoTech\Lib\TestUtilities\TestCase\Traits;
 
-use Closure;
 use PHPUnit\Framework\Attributes\Before;
 
 trait UtilityTrait
 {
-    private static self|null $_this = null;
+    private static ?self $_this = null;
 
     #[Before]
     public function copyInstanceOnBefore(): void
@@ -34,7 +33,7 @@ trait UtilityTrait
             }
         }
 
-        if ($value instanceof Closure) {
+        if ($value instanceof \Closure) {
             $value = $value();
         }
 

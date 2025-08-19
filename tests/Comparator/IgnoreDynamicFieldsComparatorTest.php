@@ -2,31 +2,30 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Comparator;
+namespace Tests\Comparator;
 
-use SilpoTech\Lib\TestUtilities\Comparator\IgnoreDynamicFieldsComparator;
 use PHPUnit\Framework\TestCase;
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Comparator\Factory;
-use stdClass;
+use SilpoTech\Lib\TestUtilities\Comparator\IgnoreDynamicFieldsComparator;
 
 class IgnoreDynamicFieldsComparatorTest extends TestCase
 {
     public function testAcceptsReturnsTrueForSpecifiedClasses(): void
     {
-        $comparator = new IgnoreDynamicFieldsComparator([stdClass::class]);
+        $comparator = new IgnoreDynamicFieldsComparator([\stdClass::class]);
 
-        $object1 = new stdClass();
-        $object2 = new stdClass();
+        $object1 = new \stdClass();
+        $object2 = new \stdClass();
 
         self::assertTrue($comparator->accepts($object1, $object2));
     }
 
     public function testAcceptsReturnsFalseForDifferentClasses(): void
     {
-        $comparator = new IgnoreDynamicFieldsComparator([stdClass::class]);
+        $comparator = new IgnoreDynamicFieldsComparator([\stdClass::class]);
 
-        $object1 = new stdClass();
+        $object1 = new \stdClass();
         $object2 = new class {};
 
         self::assertFalse($comparator->accepts($object1, $object2));
@@ -73,7 +72,7 @@ class IgnoreDynamicFieldsComparatorTest extends TestCase
 
         // This should not throw an exception since createdAt and updatedAt are ignored
         $comparator->assertEquals($object1, $object2);
-        
+
         // If we reach this point, the comparison succeeded as expected
         $this->addToAssertionCount(1);
     }

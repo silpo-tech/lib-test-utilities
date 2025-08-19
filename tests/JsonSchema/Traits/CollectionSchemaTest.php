@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests\JsonSchema\Traits;
+namespace Tests\JsonSchema\Traits;
 
-use SilpoTech\Lib\TestUtilities\JsonSchema\Traits\CollectionSchema;
 use PHPUnit\Framework\TestCase;
+use SilpoTech\Lib\TestUtilities\JsonSchema\Traits\CollectionSchema;
 
 class CollectionSchemaTest extends TestCase
 {

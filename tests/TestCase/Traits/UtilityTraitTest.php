@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\TestCase\Traits;
+namespace Tests\TestCase\Traits;
 
-use SilpoTech\Lib\TestUtilities\TestCase\Traits\UtilityTrait;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Closure;
+use SilpoTech\Lib\TestUtilities\TestCase\Traits\UtilityTrait;
 
 class UtilityTraitTest extends TestCase
 {
@@ -49,12 +48,12 @@ class UtilityTraitTest extends TestCase
     public static function resolveValuesDataProvider(): \Generator
     {
         yield [
-            [[1, 2, 3], [4, Closure::fromCallable(fn() => 5)]],
+            [[1, 2, 3], [4, \Closure::fromCallable(fn () => 5)]],
             [[1, 2, 3], [4, 5]],
         ];
 
         yield [
-            [[10, 20], [30, Closure::fromCallable(fn() => 40)]],
+            [[10, 20], [30, \Closure::fromCallable(fn () => 40)]],
             [[10, 20], [30, 40]],
         ];
     }
@@ -68,12 +67,12 @@ class UtilityTraitTest extends TestCase
     public static function resolveValueDataProvider(): \Generator
     {
         yield [
-            [1, Closure::fromCallable(fn() => 2), [3, Closure::fromCallable(fn() => [4, 5])]],
+            [1, \Closure::fromCallable(fn () => 2), [3, \Closure::fromCallable(fn () => [4, 5])]],
             [1, 2, [3, [4, 5]]],
         ];
 
         yield [
-            [10, Closure::fromCallable(fn() => 20), [30, Closure::fromCallable(fn() => [40, 50])]],
+            [10, \Closure::fromCallable(fn () => 20), [30, \Closure::fromCallable(fn () => [40, 50])]],
             [10, 20, [30, [40, 50]]],
         ];
     }
@@ -151,31 +150,31 @@ class UtilityTraitTest extends TestCase
                     'subkey2' => 'subvalue2',
                 ],
                 'key3' => 'value3',
-            ]
+            ],
         ];
 
         yield [
             [
-               [ 'key1' => 'valueA'],
+                ['key1' => 'valueA'],
             ],
             [
                 // md5 hash
-                 'cf9f9f3cb245f9418f0aba4567e935be'  => [
-                     'key1' => 'valueA'
-                 ],
-            ]
-        ];
-
-        yield [
-            [
-                [ 1 => 'valueA'],
-            ],
-            [
-                // md5 hash
-                '15b1c67009f3294d79013e7cad409c68'  => [
-                    'valueA' => 'valueA'
+                'cf9f9f3cb245f9418f0aba4567e935be' => [
+                    'key1' => 'valueA',
                 ],
-            ]
+            ],
+        ];
+
+        yield [
+            [
+                [1 => 'valueA'],
+            ],
+            [
+                // md5 hash
+                '15b1c67009f3294d79013e7cad409c68' => [
+                    'valueA' => 'valueA',
+                ],
+            ],
         ];
     }
 

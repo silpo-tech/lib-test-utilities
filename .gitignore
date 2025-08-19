@@ -5,3 +5,4 @@ composer.lock
 bin
 .phpunit.cache
 reports
+.php-cs-fixer.cache

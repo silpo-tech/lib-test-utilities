@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace SilpoTech\Lib\TestUtilities\Comparator;
 
-use Override;
 use SebastianBergmann\Comparator\ObjectComparator;
 
 class IgnoreDynamicFieldsComparator extends ObjectComparator
@@ -15,7 +14,7 @@ class IgnoreDynamicFieldsComparator extends ObjectComparator
     ) {
     }
 
-    #[Override]
+    #[\Override]
     public function accepts(mixed $expected, mixed $actual): bool
     {
         foreach ($this->classes as $class) {
@@ -27,7 +26,7 @@ class IgnoreDynamicFieldsComparator extends ObjectComparator
         return false;
     }
 
-    #[Override]
+    #[\Override]
     protected function toArray(object $object): array
     {
         $array = parent::toArray($object);

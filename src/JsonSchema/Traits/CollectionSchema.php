@@ -16,14 +16,14 @@ trait CollectionSchema
                     'items' => self::getCollectionItemJsonSchema(),
                 ],
                 'total' => [
-                    'type' => 'integer'
+                    'type' => 'integer',
                 ],
             ],
             'required' => [
                 'items',
                 'total',
             ],
-            'additionalProperties' => false
+            'additionalProperties' => false,
         ];
     }
 
@@ -36,12 +36,12 @@ trait CollectionSchema
                 ],
                 'offset' => [
                     'type' => 'integer',
-                ]
+                ],
             ],
             'required' => [
                 'limit',
-                'offset'
-            ]
+                'offset',
+            ],
         ]);
     }
 
